@@ -32,7 +32,7 @@ public class UserServiceIlm implements UserService {
     @Override
     @Transactional(readOnly = true)
     public User getUserById(long id) {
-        return userRepository.findById(id).orElse(new User());
+        return userRepository.findById(id).orElse(null);
     }
 
     @Override
